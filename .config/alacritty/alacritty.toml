@@ -1,0 +1,19 @@
+
+
+[general]
+
+import = ['~/.config/alacritty/catppuccin-mocha.toml']
+live_config_reload = true
+
+[window]
+
+opacity = 0.8
+
+[font]
+
+normal = { family="MesloLGS NF", style="Regular" }
+bold = { family="MesloLGS NF", style="Bold" }
+italic = { family="MesloLGS NF", style="Italic" }
+size = 10
+
+# Colors 
