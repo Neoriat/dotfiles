@@ -250,17 +250,6 @@ set $base #1e1e2e
 set $mantle #181825
 set $crust #11111b
 
-# Color shemes for windows 
-set $bgcolor    #3F4F4499
-set $in-bgcolor #3F4F444D
-set $text       #ffffff
-set $u-bgcolor  #ff0000
-set $indicator  #a8a3c1
-set $in-text    #969696
-
-set $focused-ws #3F4F4480
-set $bar-color  #3F4F444D
-
 # target                 title     bg    text   indicator  border
 client.focused           $lavender $base $text  $rosewater $lavender
 client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
