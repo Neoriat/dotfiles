@@ -6,5 +6,13 @@ return {
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
     -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
-  }
+  },
+  lazy = false, -- neo-tree will lazily load itself
+  ---@module "neo-tree"
+  ---@type neotree.Config?
+  opts = {
+    vim.api.nvim_set_keymap("n", "<leader>e", "<cmd>Neotree toggle<cr>", { noremap = true, silent = true }),
+vim.api.nvim_set_keymap("n", "<leader>E", "<cmd>Neotree focus<cr>",  { noremap = true, silent = true })
+
+  },
 }
