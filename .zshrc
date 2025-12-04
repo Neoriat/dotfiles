@@ -129,3 +129,6 @@ alias la='eza -la'
 alias lt='eza -T'
 alias cat="bat"
 
+
+alias rm='echo "Use trash-put please!(to bypass this do \rm file)"; false'
+
