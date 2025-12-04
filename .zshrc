@@ -123,5 +123,9 @@ export PATH=$PATH:~/.local/bin/
 
 alias dotfiles='/usr/bin/git --git-dir=/home/Neoriat/.config/dotfiles --work-tree=/home/Neoriat'
 
+alias ls='eza'
+alias ll='eza -l'
+alias la='eza -la'
+alias lt='eza -T'
 
 
