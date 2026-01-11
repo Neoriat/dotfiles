@@ -104,7 +104,7 @@ case ${chosen} in
 		fi
         ;;
     $suspend)
-		run_cmd --suspend
+		loginctl suspend
         ;;
     $logout)
 		run_cmd --logout
