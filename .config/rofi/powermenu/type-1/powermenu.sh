@@ -62,13 +62,11 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			shutdown now
+			poweroff
 		elif [[ $1 == '--reboot' ]]; then
 			reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
-			systemctl suspend
+            loginctl suspend
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
@@ -104,7 +102,7 @@ case ${chosen} in
 		fi
         ;;
     $suspend)
-		loginctl suspend
+		run_cmd --suspend
         ;;
     $logout)
 		run_cmd --logout
