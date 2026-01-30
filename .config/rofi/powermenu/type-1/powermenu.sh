@@ -11,7 +11,7 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu/type-1"
-theme='style-5'
+theme='style-1'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -62,11 +62,13 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			poweroff
+			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
-			reboot
+			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-            loginctl suspend
+			mpc -q pause
+			amixer set Master mute
+			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
@@ -97,8 +99,6 @@ case ${chosen} in
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
-		elif [[ -x '/usr/bin/xscreensaver' ]]; then
-			xscreensaver-command --lock
 		fi
         ;;
     $suspend)

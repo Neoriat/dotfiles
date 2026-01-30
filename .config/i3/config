@@ -264,7 +264,7 @@ client.background        $base
 # finds out, if available)
 bar {
         status_command SCRIPT_DIR=/home/Neoriat/.config/scripts i3blocks -c /home/$USER/.config/i3blocks/i3blocks.conf
-        font pango: Roboto 11
+        font pango: Roboto Regular 11
         i3bar_command i3bar --transparency
         separator_symbol "|"
 	colors {
