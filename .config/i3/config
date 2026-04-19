@@ -211,13 +211,15 @@ exec --no-startup-id feh --bg-scale ~/Pictures/'background 2.png'
 exec --no-startup-id  xrandr --output VGA-0  --mode 1368x768
 
 ## Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date).png"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
+#bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date).png"
+#bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date).png"
 
 ## Clipboard Screenshots
-bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+#bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+#bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
+## Screenshot with flameshot
+bindsym Print exec --no-startup-id flameshot git 
 
 exec_always "setxkbmap -layout us,ir -variant ,, -option grp:ctrl_alt_toggle   "
 ## CLipboard manager
